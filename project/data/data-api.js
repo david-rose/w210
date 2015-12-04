@@ -65,6 +65,10 @@ function getarticlelist(topic, enddate, windowsize)
     return alist;    
 }
 
+function sortbymodel1_prob(x, y)
+{
+    return sortby(x, y, 'model1_prediction_prob');
+}
 
 function sortbypercent(x, y)
 {

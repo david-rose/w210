@@ -86,7 +86,8 @@
 
      function displayarticles(o, label, id)
      {
-       var s = "<hr/><br/><strong>" + label + "</strong><br/><hr/>";
+       o.sort(sortbymodel1_prob);
+       var s = "<hr/><br/><strong>Articles</strong> - ordered by probability<br/><hr/>";
        o.forEach(function(item, index, array)
          {
            r = item['publish_date'] + "<br/>";
