@@ -5,10 +5,14 @@ function loaddata(filename)
     var req = new XMLHttpRequest();
     // make an asynchronous call to retrieve the electricity data
     req.open("GET", "./data/" + filename, false);
+    console.log("sending request");
     req.send(null);
+    console.log("reading response");
     var t = req.responseText;
     console.log(t);
-    return JSON.parse(t);
+    console.log("parsing text");
+    var p = JSON.parse(t);
+    return p;
 }
 
 function loadarticles()
