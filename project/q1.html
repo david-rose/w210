@@ -90,7 +90,7 @@
        var s = "<hr/><br/><strong>Articles</strong> - ordered by probability<br/><hr/>";
        o.forEach(function(item, index, array)
          {
-           r = item['publish_date'] + "<br/>";
+           r = item['publish_date'] + " - " + topicmap[item['topic']] + "<br/>";
            r = r + "&nbsp;&nbsp;prob = " + item['model1_prediction_prob'] + "<br/>";
            r = r + "&nbsp;&nbsp;" + item['title']  + "<br/>";
            r = r + "&nbsp;&nbsp;<a href=" + item['url'] + " target='_blank'>" + item['url'] + "</a><br/>";
@@ -111,6 +111,27 @@
        s = s + "</pre>" + "<hr/>";
        document.getElementById(id).innerHTML = s;
      }
+
+     var topicmap = {};
+     topicmap["mersc"] = "MERS";
+     topicmap["moldf"] = "MOLDF";
+     topicmap["chole"] = "Cholera";
+     topicmap["swine"] = "Swine Flu";
+     topicmap["hepat"] = "Hepatitis";
+     topicmap["influ"] = "Influenza";
+     topicmap["plagu"] = "Plague";
+     topicmap["westn"] = "West Nile";
+     topicmap["dengu"] = "Dengue";
+     topicmap["measl"] = "Measles";
+     topicmap["pertu"] = "Pertussis";
+     topicmap["hemmo"] = "Hemorrhagic Fever";
+     topicmap["menin"] = "Meningitis";
+     topicmap["ebola"] = "Ebola";
+     topicmap["mumps"] = "Mumps";
+     topicmap["chiku"] = "Chikungunya";
+     topicmap["yello"] = "Yellow Fever";
+     topicmap["unkno"] = "Unknown";
+
     </script>
 
   </body>
