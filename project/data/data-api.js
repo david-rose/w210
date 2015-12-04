@@ -38,7 +38,7 @@ function isnumeric(n) {
 }
 
 msinaday = 24 * 60 * 60 * 1000;
-function getarticlelist(articles, topic, enddate, windowsize)
+function getarticlelist(topic, enddate, windowsize)
 {
     var alist = [];
     var article = new Object();
@@ -48,7 +48,8 @@ function getarticlelist(articles, topic, enddate, windowsize)
     console.log("start = " + start.toString());
     console.log("end   = " + end.toString());
     console.log("articles = " + articles.length);
-    for (var i = 0; i < articles.length; i++)
+//    for (var i = 0; i < articles.length; i++)
+    for (var i in articles)
     {
         console.log(articles[i]);
         var a = articles[i];
