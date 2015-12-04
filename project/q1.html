@@ -73,6 +73,7 @@
      var articles = {};
      var aggregates = {};
      window.onload = function() {articles = loadarticles(); }
+     console.log("q1.html: articles count = " + articles.length);
 //     window.onload = function() {articles = loadarticles(); aggregates = loadarticlesagg(); updatedata(); }
 
      function updatedata()
@@ -83,7 +84,7 @@
        topic = "all";
        enddate = "2015-09-30";
 
-       var articlelist = getarticlelist(topic, enddate, 10);
+       var articlelist = getarticlelist(articles, topic, enddate, 10);
 
        displayJSON(articlelist, 'Articles', 'articles');
      }
