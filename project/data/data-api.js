@@ -12,6 +12,7 @@ function loaddata(filename)
     console.log(t);
     console.log("parsing text");
     var p = JSON.parse(t);
+    console.log(p);
     console.log("parsing complete, length = " + p.length);
     return p;
 }
