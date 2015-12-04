@@ -12,6 +12,7 @@ function loaddata(filename)
     console.log(t);
     console.log("parsing text");
     var p = JSON.parse(t);
+    console.log("parsing complete");
     return p;
 }
 
@@ -39,15 +40,19 @@ function getarticlelist(topic, enddate, windowsize)
 {
     var alist = [];
     var article = new Object();
+    console.log("calculating startdate");
     var startdate = enddate - windowsize;
+    console.log("startdate = " + startdate);
     for (var i = 0; i < articles.length; i++)
     {
         var a = articles[i];
         if (a['topic'] == topic && a['publish_date'] >= startdate && a['publish_date'] <= enddate)
         {
+            console.log("pushing article to list");
             alist.push(a);
         }
     }
+    console.log("returning article list");
     return alist;    
 }
 
