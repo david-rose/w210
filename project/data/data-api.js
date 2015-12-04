@@ -14,7 +14,7 @@ function loadarticles()
     return loaddata("articles_positive.json");
 }
 
-function loadarticles-agg()
+function loadarticlesagg()
 {
     return loaddata("articles_positive_agg.json");
 }
