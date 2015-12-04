@@ -67,7 +67,8 @@ function getarticlelist(topic, enddate, windowsize)
 
 function sortbymodel1_prob(x, y)
 {
-    return sortby(x, y, 'model1_prediction_prob');
+    // sort by model1_prediction_prob in descending order
+    return (sortby(x, y, 'model1_prediction_prob') * -1);
 }
 
 function sortbypercent(x, y)
