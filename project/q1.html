@@ -90,7 +90,7 @@
        o.forEach(function(item, index, array)
          {
            r = item['publish_date'] + "<br/>";
-           r = r + "&nbsp;&nbsp;" + item['model1_prediction_prob'] + "<br/>";
+           r = r + "&nbsp;&nbsp;prob = " + item['model1_prediction_prob'] + "<br/>";
            r = r + "&nbsp;&nbsp;" + item['title']  + "<br/>";
            r = r + "&nbsp;&nbsp;<a href=" + item['url'] + " target='_blank'>" + item['url'] + "</a><br/>";
            s = s + r + "<br/>";
