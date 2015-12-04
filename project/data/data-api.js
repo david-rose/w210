@@ -11,12 +11,12 @@ function loaddata(filename)
 
 function loadarticles()
 {
-    return loaddata("articles_positive.json");
+    return loaddata("articles.json");
 }
 
 function loadarticlesagg()
 {
-    return loaddata("articles_positive_agg.json");
+    return loaddata("articles_agg.json");
 }
 
 
