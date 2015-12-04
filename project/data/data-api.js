@@ -43,7 +43,7 @@ function getarticlelist(topic, enddate, windowsize)
     var article = new Object();
     console.log("calculating startdate");
     var end = new Date(enddate)
-    var start = end - (windowsize * msinaday);
+    var start = new Date(end - (windowsize * msinaday));
     console.log("start = " + start.toString());
     console.log("end   = " + end.toString());
     for (var i = 0; i < articles.length; i++)
