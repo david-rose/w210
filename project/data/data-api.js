@@ -46,6 +46,7 @@ function getarticlelist(topic, enddate, windowsize)
     var start = new Date(end - (windowsize * msinaday));
     console.log("start = " + start.toString());
     console.log("end   = " + end.toString());
+    console.log("articles = " + articles.length);
     for (var i = 0; i < articles.length; i++)
     {
         console.log(articles[i]);
@@ -58,7 +59,7 @@ function getarticlelist(topic, enddate, windowsize)
             alist.push(a);
         }
     }
-    console.log("returning article list");
+    console.log("returning article list, size = " + alist.length);
     return alist;    
 }
 
