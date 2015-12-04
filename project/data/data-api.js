@@ -36,17 +36,20 @@ function isnumeric(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
+msinaday = 24 * 60 * 60 * 1000;
 function getarticlelist(topic, enddate, windowsize)
 {
     var alist = [];
     var article = new Object();
     console.log("calculating startdate");
-    var startdate = enddate - windowsize;
-    console.log("startdate = " + startdate);
+    var end = new Date(enddate)
+    var start = end - (windowsize * msinaday);
+    console.log("startdate = " + start);
     for (var i = 0; i < articles.length; i++)
     {
         var a = articles[i];
-        if (a['topic'] == topic && a['publish_date'] >= startdate && a['publish_date'] <= enddate)
+        var pubdate = new Date(a['publish_date']);
+        if (a['topic'] == topic && pubdate >= start && pubdate <= end)
         {
             console.log("pushing article to list");
             alist.push(a);
