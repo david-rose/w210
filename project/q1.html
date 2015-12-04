@@ -11,7 +11,7 @@
      }
      .code {
        float: left;
-       width: 17%;
+       width: 40%;
        margin-left:0px;
        margin-right:0px;
        padding-left:0px;
@@ -88,8 +88,10 @@
        var s = "<hr/><br/><strong>" + label + "</strong><br/><hr/>";
        o.forEach(function(item, index, array)
          {
-           r = item['publish_date'] + " " + item['model1_prediction_prob']
-             + " " + item['title']  + " " + item['url']
+           r = item['publish_date'] + "<br/>";
+           r = r + "&nbr;&nbr;" + item['model1_prediction_prob'] + "<br/>";
+           r = r + "&nbr;&nbr;" + item['title']  + "<br/>";
+           r = r + "&nbr;&nbr;" + item['url'] + "<br/>";
            s = s + r + "<br/>";
          });
        s = s + "<hr/>";
