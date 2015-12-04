@@ -44,12 +44,13 @@ function getarticlelist(topic, enddate, windowsize)
     console.log("calculating startdate");
     var end = new Date(enddate)
     var start = end - (windowsize * msinaday);
-    console.log("startdate = " + start);
+    console.log("start = " + start.toString());
+    console.log("end   = " + end.toString());
     for (var i = 0; i < articles.length; i++)
     {
         var a = articles[i];
         var pubdate = new Date(a['publish_date']);
-        if (a['topic'] == topic && pubdate >= start && pubdate <= end)
+        if ((topic == 'all' || a['topic'] == topic) && pubdate >= start && pubdate <= end)
         {
             console.log("pushing article to list");
             alist.push(a);
