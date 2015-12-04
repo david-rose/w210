@@ -6,7 +6,9 @@ function loaddata(filename)
     // make an asynchronous call to retrieve the electricity data
     req.open("GET", "./data/" + filename, false);
     req.send(null);
-    return JSON.parse(req.responseText);
+    var t = req.responseText;
+    console.log(t);
+    return JSON.parse(t);
 }
 
 function loadarticles()
